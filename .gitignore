@@ -1,5 +1,8 @@
 .idea
 .vs
+.venv
+venv
 */.idea
 */.vs
+*/.venv
 */venv
