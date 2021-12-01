@@ -13,24 +13,21 @@ def main():
             input("Bitte zweites Wort eingeben:\t")
         ])
 
-    # print the array
+    # save the inverse of the array as a new array, flattened
+    pairs_inverse = []
+    for i in range(len(pairs) - 1, -1, -1):
+        pairs_inverse += pairs[i]
+
+    # reverse the word-pair arrays inside "pairs", save the result in "pairs_content_inverse"
+    pairs_content_inverse = []
+    for i in range(len(pairs)):
+        # since the pairs consist only of two words, we can assign the first word to the second word and vice versa
+        pairs_content_inverse += [pairs[i][1], pairs[i][0]]
+
+    # print the results
     print(pairs)
-
-    # save the inverse of the array as a new array
-    pairs_inverse = pairs[::-1]
-
-    # flatten the array
-    pairs_flat = []
-
-    for sub_list in pairs_inverse:
-        for item in sub_list:
-            pairs_flat.append(item)
-
-    # print the flattened array
-    print(pairs_flat)
-
-    # print the inverse of the flattened array
-    print(pairs_flat[::-1])
+    print(pairs_inverse)
+    print(pairs_content_inverse)
 
 
 if __name__ == "__main__":
