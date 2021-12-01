@@ -7,8 +7,11 @@ def main():
 
     # take user input twice for each word pair
     for i in range(n_pairs):
-        print(f"Bitte geben Sie das {i + 1}te Wortpaar ein: ")
-        pairs.append([input(), input()])
+        print(f"Bitte geben Sie das {i + 1}te Wortpaar ein")
+        pairs.append([
+            input("Bitte erstes Wort eingeben:\t"),
+            input("Bitte zweites Wort eingeben:\t")
+        ])
 
     # print the array
     print(pairs)
