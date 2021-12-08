@@ -8,8 +8,7 @@ def main():
     # print all lines with floating point numbers
     for line in numbers:
         try:
-            number = float(line)
-            print(number)
+            print(float(line))
         except:
             pass
 
