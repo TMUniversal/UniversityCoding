@@ -8,8 +8,8 @@ def main():
     # search for the letter in the input, increment the counter if found
     counter = 0
     for line in sys.stdin:
-        for letter in line:
-            if letter.lower() == target_letter:
+        for letter in line.lower():
+            if letter == target_letter:
                 counter += 1
 
     sys.stdout.write(f'Im vorliegenden Text gibt es den Buchstaben \'{target_letter}\' so oft: {counter} mal.\n')
