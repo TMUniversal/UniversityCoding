@@ -12,7 +12,7 @@ def main():
             if letter == target_letter:
                 counter += 1
 
-    sys.stdout.write(f'Im vorliegenden Text gibt es den Buchstaben \'{target_letter}\' so oft: {counter} mal.\n')
+    sys.stdout.write(f"Im vorliegenden Text gibt es den Buchstaben '{sys.argv[1]}' so oft: {counter} mal.")
 
 
 if __name__ == "__main__":
