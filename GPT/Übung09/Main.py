@@ -19,10 +19,7 @@ def main():
         print(fibonacci(fib_index))
 
     else:
-        try:
-            print(summe())
-        except ValueError:
-            print("Eingaben müssen Zahlen sein.")
+        print(summe())
 
 
 if __name__ == "__main__":
