@@ -1,7 +1,3 @@
-import math
-import random
-
-
 def main():
     # Array with random strings
     array = ["Hallo", "Welt", "Wie", "geht", "es", "dir", "?"]
