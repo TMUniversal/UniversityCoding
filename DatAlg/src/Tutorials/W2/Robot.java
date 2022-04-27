@@ -1,3 +1,5 @@
+package Tutorials.W2;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -10,7 +12,7 @@ public class Robot extends Frame {
 
   /* Constructor */
   public Robot() {
-    setTitle("Picture-Drawing Robot");
+    setTitle("Picture-Drawing Tutorials.W2.Robot");
     setSize(700, 700);
     addWindowListener(new WindowAdapter() {
       @Override
@@ -28,13 +30,13 @@ public class Robot extends Frame {
     g.drawLine(convert(x1), convert(y1 * -1), convert(x2), convert(y2 * -1));
   }
 
-  /* State of the Picture-Drawing Robot */
+  /* State of the Picture-Drawing Tutorials.W2.Robot */
   private double orientation = 0;
   private double xpos = 0;
   private double ypos = 0;
   private boolean down = false;
 
-  /* Operations on the Robot */
+  /* Operations on the Tutorials.W2.Robot */
   public double orientation() {
     return orientation;
   }
@@ -147,7 +149,7 @@ public class Robot extends Frame {
 
   @Override
   public void paint(Graphics g) {
-    /* Initialize Robot */
+    /* Initialize Tutorials.W2.Robot */
     this.g = g;
     orientation = 0;
     xpos = 0;
