@@ -108,7 +108,7 @@ public class Robot extends Frame {
 
   /* Implementation of the algorithm of exercise task 3.1 (1) */
   public void changeorientation(double x) {
-    orientation += x;
+    orientation = x;
   }
 
   /* Implementation of the algorithm of exercise task 3.1 (2) */
