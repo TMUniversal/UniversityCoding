@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Uebung09 {
+public class Uebung09Task01 {
   private static List<Car> carPark = new ArrayList<>();
   private static Lock carParkLock = new ReentrantLock();
 
