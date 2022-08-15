@@ -13,5 +13,5 @@ if (int(a) < int(b) < int(c)):
 if (int(a) > int(b) > int(c)):
     print("Absteigend sortiert")
 
-if not(int(a) == int(b) == int(c)) and not(int(a) < int(b) < int(c)) and not(int(a) > int(b) > int(c)):
+if not (int(a) == int(b) == int(c)) and not (int(a) < int(b) < int(c)) and not (int(a) > int(b) > int(c)):
     print("Unsortiert")

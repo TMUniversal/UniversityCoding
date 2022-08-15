@@ -1,10 +1,12 @@
 import sys
 
-def check_palindrome(s : str) -> bool:
+
+def check_palindrome(s: str) -> bool:
     for i in range(len(s)):
         if s[i].lower() != s[len(s) - 1 - i].lower():
             return False
     return True
+
 
 dateiname = sys.argv[1]
 

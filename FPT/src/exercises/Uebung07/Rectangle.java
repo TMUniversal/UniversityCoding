@@ -15,7 +15,7 @@ public class Rectangle implements Figure {
 
   @Override
   public String toString() {
-    return "Rectangle{" + this.x + ", " + y + " d=" +  width + "x" + height + ", s=" + surface() + '}';
+    return "Rectangle{" + this.x + ", " + y + " d=" + width + "x" + height + ", s=" + surface() + '}';
   }
 
   public void move(int x, int y) {

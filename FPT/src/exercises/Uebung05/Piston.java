@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class Piston implements Serializable {
   private float thickness;
 
-  public Piston() {}
+  public Piston() {
+  }
 
   public Piston(float thickness) {
     this.thickness = thickness;

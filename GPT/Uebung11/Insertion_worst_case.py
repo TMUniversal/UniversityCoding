@@ -4,4 +4,3 @@ for i in range(100, 0, -1):
 
 with open("insertion_worst_case.txt", "w") as f:
     f.write(s)
-

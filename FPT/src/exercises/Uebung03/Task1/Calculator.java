@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Calculator {
+  private static Scanner scanner = new Scanner(System.in);
   private Boolean hasQuit = false;
   private ArrayList<Double> numbers = new ArrayList<Double>();
-  private static Scanner scanner = new Scanner(System.in);
 
   private static void printMenu() {
     System.out.println("\n");
@@ -22,6 +22,11 @@ public class Calculator {
   private static String getUserInput() {
     System.out.println("Enter a number to add to the list, or a command: ");
     return scanner.nextLine();
+  }
+
+  public static void main(String[] args) {
+    Calculator calc = new Calculator();
+    calc.start(args);
   }
 
   private void show() {
@@ -83,10 +88,5 @@ public class Calculator {
         }
       }
     }
-  }
-
-  public static void main(String[] args) {
-    Calculator calc = new Calculator();
-    calc.start(args);
   }
 }

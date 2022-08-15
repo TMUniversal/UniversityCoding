@@ -1,7 +1,5 @@
 package bonusTasks.task5;
 
-import java.util.Date;
-
 public class MediaDisk {
   private int id;
   private String title;

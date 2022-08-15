@@ -6,8 +6,8 @@ import java.util.List;
 import static util.Util.threadPrintln;
 
 public class BonusTask4 {
-  private static int MAX_VISITORS = 300;
   private static final List<Visitor> eventLocation = new ArrayList<>();
+  private static int MAX_VISITORS = 300;
 
   public static void main(String[] args) {
     for (int i = 0; i < 4; i++) {

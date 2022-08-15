@@ -17,6 +17,15 @@ public class Person {
     this("Max Mustermann", 22, 1.90f);
   }
 
+  public static void main(String[] args) {
+    Person[] people = new Person[2];
+    people[0] = new Person();
+    people[1] = new Person();
+    people[1].setName("Max Planck");
+
+    System.out.println(Arrays.toString(people));
+  }
+
   public String getName() {
     return name;
   }
@@ -44,14 +53,5 @@ public class Person {
   @Override
   public String toString() {
     return String.format("Name: %s, Age: %d, Size: %.2f", name, age, size);
-  }
-
-  public static void main(String[] args) {
-    Person[] people = new Person[2];
-    people[0] = new Person();
-    people[1] = new Person();
-    people[1].setName("Max Planck");
-
-    System.out.println(Arrays.toString(people));
   }
 }

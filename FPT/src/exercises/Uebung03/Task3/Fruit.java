@@ -26,6 +26,6 @@ public class Fruit {
     }
     Fruit fruit = (Fruit) obj;
     return harvestDate.equals(fruit.harvestDate) && weight.equals(fruit.weight)
-        && countryOfOrigin.equals(fruit.countryOfOrigin) && colour.equals(fruit.colour);
+      && countryOfOrigin.equals(fruit.countryOfOrigin) && colour.equals(fruit.colour);
   }
 }

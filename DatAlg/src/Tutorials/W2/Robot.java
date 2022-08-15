@@ -1,15 +1,20 @@
 package Tutorials.W2;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Robot extends Frame {
-  Graphics g;
   /* Offset for painting area, such that (0,0) is in the middle */
   final static int offset = 360;
   // final static int xoffset = 510;
   final static int scalefactor = 100;
-
+  Graphics g;
+  /* State of the Picture-Drawing Tutorials.W2.Robot */
+  private double orientation = 0;
+  private double xpos = 0;
+  private double ypos = 0;
+  private boolean down = false;
   /* Constructor */
   public Robot() {
     setTitle("Picture-Drawing Tutorials.W2.Robot");
@@ -22,6 +27,10 @@ public class Robot extends Frame {
     });
   }
 
+  public static void main(String[] args) {
+    new Robot().setVisible(true);
+  }
+
   private int convert(double x) {
     return new Double(offset + x * scalefactor).intValue();
   }
@@ -29,12 +38,6 @@ public class Robot extends Frame {
   private void drawL(double x1, double y1, double x2, double y2) {
     g.drawLine(convert(x1), convert(y1 * -1), convert(x2), convert(y2 * -1));
   }
-
-  /* State of the Picture-Drawing Tutorials.W2.Robot */
-  private double orientation = 0;
-  private double xpos = 0;
-  private double ypos = 0;
-  private boolean down = false;
 
   /* Operations on the Tutorials.W2.Robot */
   public double orientation() {
@@ -78,10 +81,6 @@ public class Robot extends Frame {
     down = false;
   }
 
-  public void lowerpen() {
-    down = true;
-  }
-
   /*
    * In the methods below we will only make use
    * of the following methods and methods defined
@@ -95,6 +94,10 @@ public class Robot extends Frame {
    * - raisepen()
    * - lowerpen()
    */
+
+  public void lowerpen() {
+    down = true;
+  }
 
   /* Drawpolygon example from the lecture */
   public void drawpolygon(double size, int n) {
@@ -183,9 +186,5 @@ public class Robot extends Frame {
     movetopoint(0.5, 0.5);
 
     nikolaus(1);
-  }
-
-  public static void main(String[] args) {
-    new Robot().setVisible(true);
   }
 }

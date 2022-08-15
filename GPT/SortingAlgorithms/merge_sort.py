@@ -1,9 +1,9 @@
-def merge(arr : list, lo : int, mid : int, hi : int, aux : list) -> None:
+def merge(arr: list, lo: int, mid: int, hi: int, aux: list) -> None:
     """
     Merge two sorted subarrays in place.
     [lo, mid] and [mid + 1, hi] are sorted.
     """
-    aux[lo:hi+1] = arr[lo:hi+1]
+    aux[lo:hi + 1] = arr[lo:hi + 1]
     i = lo
     j = mid + 1
     for k in range(lo, hi + 1):
@@ -21,7 +21,7 @@ def merge(arr : list, lo : int, mid : int, hi : int, aux : list) -> None:
             i += 1
 
 
-def sortPart(arr : list, lo : int, hi : int, aux : list) -> None:
+def sortPart(arr: list, lo: int, hi: int, aux: list) -> None:
     """
     Sort a subarray in place.
     """
@@ -33,7 +33,7 @@ def sortPart(arr : list, lo : int, hi : int, aux : list) -> None:
     merge(arr, lo, mid, hi, aux)
 
 
-def mergeSort(arr : list) -> None:
+def mergeSort(arr: list) -> None:
     """
     Sort an array in place.
     """

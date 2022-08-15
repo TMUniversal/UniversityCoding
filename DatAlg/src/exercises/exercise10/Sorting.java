@@ -8,6 +8,41 @@ import java.util.Objects;
  */
 public class Sorting {
   /**
+   * The main method initiates the test
+   */
+  public static void main(String[] args) {
+    Sorting s = new Sorting();
+    Integer[] a1 = {5, 4, 3, 2, 1};
+    Integer[] a2 = {2, 1, 2, 2, 1};
+    Integer[] a3 = s.randomIntegerArray(10);
+    String[] s1 = {"Apfel", "Apfelsine", "Orange", "Banane"};
+    //The first paragraph of the preface of the CSP book of C.A.R. Hoare
+    String[] s2 = {"This", "is", "a", "book", "for", "the", "aspiring", "programmer", "the",
+      "programmer", "who", "aspires", "to", "greater", "understanding", "and",
+      "skill", "in", "the", "practice", "of", "an", "intellectually",
+      "demanding", "profession", "It", "is", "designed", "to", "appeal",
+      "first", "to", "a", "natural", "sense", "of", "curiosity", "which", "is",
+      "aroused", "by", "a", "new", "approach", "to", "a", "familiar", "topic",
+      "The", "approach", "is", "illustrated", "by", "a", "host", "of",
+      "examples", "drawn", "from", "a", "wide", "range", "of", "applications",
+      "from", "vending", "machines", "through", "fairy", "stories", "and",
+      "games", "to", "computer", "operating", "systems", "The", "treatment",
+      "is", "based", "on", "a", "mathematical", "theory", "which", "is",
+      "described", "by", "a", "systematic", "collection", "of", "algebraic",
+      "laws"};
+    s.sortTester(a1);
+    System.out.println();
+    s.sortTester(a2);
+    System.out.println();
+    s.sortTester(a3);
+    System.out.println();
+    s.sortTester(s1);
+    System.out.println();
+    s.sortTester(s2);
+
+  }
+
+  /**
    * The method ordered checks if a given array is ordered.
    * The ordering is given by the Comparable interface of Java.
    */
@@ -17,7 +52,6 @@ public class Sorting {
     }
     return true;
   }
-
 
   /**
    * The method checks if two given arrays are permutations of each other.
@@ -45,7 +79,6 @@ public class Sorting {
 
     return true;
   }
-
 
   /**
    * This method implements bubble sort
@@ -102,7 +135,6 @@ public class Sorting {
     }
   }
 
-
   /**
    * Test the implementations of bubblesort, insertionsort and selectionsort using the array a
    */
@@ -150,41 +182,6 @@ public class Sorting {
       r += ", " + a[i];
     r += "]";
     return r;
-  }
-
-  /**
-   * The main method initiates the test
-   */
-  public static void main(String[] args) {
-    Sorting s = new Sorting();
-    Integer[] a1 = {5, 4, 3, 2, 1};
-    Integer[] a2 = {2, 1, 2, 2, 1};
-    Integer[] a3 = s.randomIntegerArray(10);
-    String[] s1 = {"Apfel", "Apfelsine", "Orange", "Banane"};
-    //The first paragraph of the preface of the CSP book of C.A.R. Hoare
-    String[] s2 = {"This", "is", "a", "book", "for", "the", "aspiring", "programmer", "the",
-      "programmer", "who", "aspires", "to", "greater", "understanding", "and",
-      "skill", "in", "the", "practice", "of", "an", "intellectually",
-      "demanding", "profession", "It", "is", "designed", "to", "appeal",
-      "first", "to", "a", "natural", "sense", "of", "curiosity", "which", "is",
-      "aroused", "by", "a", "new", "approach", "to", "a", "familiar", "topic",
-      "The", "approach", "is", "illustrated", "by", "a", "host", "of",
-      "examples", "drawn", "from", "a", "wide", "range", "of", "applications",
-      "from", "vending", "machines", "through", "fairy", "stories", "and",
-      "games", "to", "computer", "operating", "systems", "The", "treatment",
-      "is", "based", "on", "a", "mathematical", "theory", "which", "is",
-      "described", "by", "a", "systematic", "collection", "of", "algebraic",
-      "laws"};
-    s.sortTester(a1);
-    System.out.println();
-    s.sortTester(a2);
-    System.out.println();
-    s.sortTester(a3);
-    System.out.println();
-    s.sortTester(s1);
-    System.out.println();
-    s.sortTester(s2);
-
   }
 
 }

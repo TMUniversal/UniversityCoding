@@ -28,6 +28,16 @@ public class Server {
     server.start();
   }
 
+  public static void prepareDb(Connection connection) {
+    try (PreparedStatement statement = connection.prepareStatement(
+      "CREATE TABLE IF NOT EXISTS users (name VARCHAR(255) PRIMARY KEY, pass VARCHAR(255))"
+    )) {
+      statement.execute();
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
   public void start() throws SQLException {
     try (ServerSocket serverSocket = new ServerSocket(3000, 50, InetAddress.getLocalHost())) {
       // for this exercise, we won't be running the server for more than one connection.
@@ -126,16 +136,6 @@ public class Server {
       boolean exists = resultSet.next();
       resultSet.close();
       return exists;
-    } catch (SQLException e) {
-      throw new RuntimeException(e);
-    }
-  }
-
-  public static void prepareDb(Connection connection) {
-    try (PreparedStatement statement = connection.prepareStatement(
-      "CREATE TABLE IF NOT EXISTS users (name VARCHAR(255) PRIMARY KEY, pass VARCHAR(255))"
-    )) {
-      statement.execute();
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }

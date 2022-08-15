@@ -12,6 +12,18 @@ import javafx.stage.Stage;
 public class BonusTask7_1 extends Application {
   private String potentialPalindrome;
 
+  public static boolean isPalindrome(String potentialPalindrome) {
+    for (int i = 0; i < potentialPalindrome.length() / 2; i++) {
+      if (potentialPalindrome.charAt(i) != potentialPalindrome.charAt(potentialPalindrome.length() - i - 1)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public static void main(String[] args) {
+    launch(args);
+  }
 
   @Override
   public void start(Stage primaryStage) throws Exception {
@@ -37,18 +49,5 @@ public class BonusTask7_1 extends Application {
     Scene scene = new Scene(content);
     primaryStage.setScene(scene);
     primaryStage.show();
-  }
-
-  public static boolean isPalindrome(String potentialPalindrome) {
-    for (int i = 0; i < potentialPalindrome.length() / 2; i++) {
-      if (potentialPalindrome.charAt(i) != potentialPalindrome.charAt(potentialPalindrome.length() - i - 1)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  public static void main(String[] args) {
-    launch(args);
   }
 }
