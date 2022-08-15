@@ -1,0 +1,11 @@
+package exercises.Uebung11;
+
+public enum Action {
+  LOGIN,
+  LOGIN_SUCCESSFUL,
+  LOGIN_UNSUCCESSFUL,
+  REGISTER,
+  REGISTER_SUCCESSFUL,
+  REGISTER_UNSUCCESSFUL,
+  CLOSE
+}
