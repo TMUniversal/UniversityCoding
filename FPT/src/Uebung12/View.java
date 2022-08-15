@@ -37,6 +37,7 @@ public class View extends BorderPane {
     operatorContainer.getChildren().addAll(operatorButtons.values());
     operatorContainer.getChildren().add(equalsButton);
 
+    textField.setEditable(false);
     numberDisplayContainer.getChildren().add(textField);
 
     numberButtonsContainer.add(numberButtons.get("7"), 0, 0);
